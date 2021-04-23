@@ -2,7 +2,7 @@
 
 Welcome to the Zuma Labs Frontend Developer Challenge. Please read all of the instructions in this ReadMe before beginning and refer back to it as required.
 
-This small task is designed to see how you like to code. There are no right or wrong ways to complete the challenge but we have some acceptance criteria we would like you to hit. 
+This task is designed to see how you like to code. There are no right or wrong ways to complete the challenge but we have some acceptance criteria we would like you to hit. 
 
 ## What are we asking you to build? 
 
