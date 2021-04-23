@@ -2,7 +2,7 @@
 
 Welcome to the Zuma Labs Frontend Developer Challenge. Please read all of the instructions in this ReadMe before beginning and refer back to it as required.
 
-This small task is designed to see how you like to code. There is no right or wrong ways to complete the challenge but we have some acceptance criteria we would like you to hit. 
+This small task is designed to see how you like to code. There are no right or wrong ways to complete the challenge but we have some acceptance criteria we would like you to hit. 
 
 ## What are we asking you to build? 
 
@@ -44,15 +44,15 @@ Glad you asked!
 
 ## Arrrrrgh Typescript!? I only know Javascript!
 
-If your palms are sweating at the sight of all this Typescript malarkey, fear not intrepid programmatorial pugilist. While the repo you clone will be in predominantly in Typescript you won't need to know Typescript. There is a javascript file `TickerJS.jsx` setup ready for your Javascript wizardry. If you want to take a crack at Typescript though, feel free. 
+If your palms are sweating at the sight of all this Typescript malarkey, fear not intrepid programmatorial pugilist. While the repo you clone will be in predominantly in Typescript you won't need to know Typescript. There is a Javascript directory containing a file `Ticker.jsx` setup ready for your Javascript wizardry. If you want to take a crack at Typescript though, feel free. 
 
 ## EXTRA CREDIT (sort of)
 
-Testing code is important, so if you know how add a test or two to show us your skills. Each of the language directories containing the component also has an empty test file. Like the main challenge, you are welcome to use any other testing libraries/frameworkds to complete the verification of your creation's solid and unfaultering foundations. 
+Testing code is important, so if you know how add a test or two, show us your skills. Each of the language directories containing the component also have an empty test file. Like the main challenge, you are welcome to use any other testing libraries/frameworks to complete the verification of your tickable's solid and unfaultering foundations. 
 
 ### Don't panic!
 Has it all gone wrong? Is Rome aflame? Fear not!
 
-If you need to contact us regarding this challenge for questions, queries, or to notify us of something that isn't working as it should, please respond to the email we sent you containing this challenge. 
+If you need to contact us regarding this challenge for questions, queries, or to notify us of something that isn't working as it should be, please respond to the email we sent you containing this challenge. 
 
-<span style="font-size: 0.6em">Did you read this all? If so, let us know by adding a 🐸 in a comment in your code.</span>
+<sub>Did you read this all? If so, let us know by adding a 🐸 in a comment in your code.</sub>
