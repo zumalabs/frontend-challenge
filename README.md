@@ -44,7 +44,7 @@ Glad you asked!
 
 ## Arrrrrgh Typescript!? I only know Javascript!
 
-If your palms are sweating at the sight of all this Typescript malarkey, fear not intrepid programmatorial pugilist. While the repo you clone will be in predominantly in Typescript you won't need to know Typescript. There is a Javascript directory containing a file `Ticker.jsx` setup ready for your Javascript wizardry. If you want to take a crack at Typescript though, feel free. 
+If your palms are sweating at the sight of all this Typescript malarkey, fear not intrepid programmatorial pugilist. While the repo you clone will be in predominantly in Typescript you won't need to know Typescript. There is a `Javascript` directory containing a file `Tickable.jsx` setup ready for your Javascript wizardry. If you want to take a crack at Typescript though, feel free. 
 
 ## EXTRA CREDIT (sort of)
 
