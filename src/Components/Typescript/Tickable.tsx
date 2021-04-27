@@ -5,7 +5,7 @@ interface Tickable {
 }
 
 const TickableTS: FC<Tickable> = ({ value }) => { 
-  return null;
+  return <div>{`Hello World ${value}`}</div>;
 }
 
 export default TickableTS;
