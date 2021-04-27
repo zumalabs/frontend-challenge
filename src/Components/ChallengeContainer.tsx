@@ -31,7 +31,7 @@ const ChallengeContainer = () => {
             <label>Tick Speed</label>
             <label>10s</label>
           </div>
-          <input className={'tickSpeedControl'} type={'range'} min={1000} max={10000} onChange={(e) => setTickSpeed(parseInt(e.target.value))}/>
+          <input className={'tickSpeedControl'} value={tickSpeed} type={'range'} min={1000} max={10000} onChange={(e) => setTickSpeed(parseInt(e.target.value))}/>
         </div>
       </div>
     </div>
