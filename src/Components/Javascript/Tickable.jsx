@@ -10,6 +10,7 @@ const TickableJS = ({ value, previousValue }) => {
   return (
     <div className={"tickerWrapper"}>
       <div className={"tickerCurrentValue"}>
+        {differenceInValue > 0 ? <span key={value} className={"arrowAnimation"}>&#8593;</span> : differenceInValue < 0 ? <span key={value} className={"arrowAnimation"}>&#8595;</span> : null}
         <span> {value} </span>
       </div>
       <div className={`tickerValueStats ${classToAdd}`}>

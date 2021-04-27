@@ -24,3 +24,16 @@
 .tickerValueStats>span:first-child{
     margin-right: 2pt;
 }
+
+.arrowAnimation{
+    animation: highlightNumber 0.7s;
+    opacity: 0;
+}
+
+@keyframes highlightNumber {
+    20%  {opacity: 0.3;}
+    40%  {opacity: 0.6;}
+    50%  {opacity: 1.0;}
+    80%  {opacity: 0.5;}
+    100% {opacity: 0.0;}
+}
