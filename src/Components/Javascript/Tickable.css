@@ -1,0 +1,26 @@
+.tickerWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.tickerCurrentValue{
+    font-size: 32pt;
+    font-weight: 500;
+}
+
+.tickerValueStats{
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.positiveTicker {
+    color: rgb(15, 61, 15);
+}
+
+.negativeTicker {
+    color: rgb(153, 0, 0);
+}
+
+.tickerValueStats>span:first-child{
+    margin-right: 2pt;
+}
