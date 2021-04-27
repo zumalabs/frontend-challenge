@@ -1,13 +1,14 @@
 const TickableJS = ({ value, previousValue }) => { 
   const differenceInValue = value - previousValue;
-  const percentageDifference = Math.round(value / previousValue * 100) / 100;
+  const percentageDifference = previousValue !== '0' ? Math.round(Math.abs(value - previousValue) / previousValue * 10000) / 100 : '0.00';
 
+  const signToShow = differenceInValue > 0 ? '+' : '';
   const classToAdd = differenceInValue > 0 ? 'positive-ticker' : differenceInValue < 0 ? 'negative-ticker' : 'no-change-ticker';
 
   return (
     <div>
         <span> {value} </span>
-        <span> {differenceInValue} </span>
+        <span> {signToShow + differenceInValue} </span>
         <span> {`(${percentageDifference}%)`} </span>
     </div>
   );
