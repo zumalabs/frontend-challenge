@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from "react";
 import "./Tickable.css";
+import usePrevious from "../../Hooks/usePrevious";
 
 // 🐸
 
@@ -8,16 +9,22 @@ interface Tickable {
 }
 
 const TickableTS: FC<Tickable> = ({ value }) => {
-  const [preValue, setPrevValue] = useState<string>(value);
-  const [direction, setDirection] = useState<string>("");
+  const prevNumber: string = usePrevious<string>(value);
 
-  useEffect(() => {
-    if (preValue > value) {
-      setDirection("down");
-    } else {
-      setDirection("up");
-    }
-  }, [value]);
+  console.log("VALUE and PREV: ", value, prevNumber);
+
+  // const [direction, setDirection] = useState<string>("");
+
+  // useEffect(() => {
+  //   if (prevNumber > value) {
+  //     setDirection("down");
+  //   } else {
+  //     setDirection("up");
+  //   }
+  // }, [prevNumber]);
+
+  const direction =
+    value > prevNumber ? "up" : value < prevNumber ? "down" : "";
 
   return (
     <div>
