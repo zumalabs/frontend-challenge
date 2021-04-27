@@ -32,15 +32,17 @@ Want to add flashy bells, whistles or emojis, we will only learn more if you do 
 
 Glad you asked! 
 
-1. Clone this repo to your local machine
-2. `npm i` or `yarn` to install the dependencies
-3. Checkout a branch that is your name so we know who's code we are looking at.
-2. Have a dig about, its always good to get familiar (its create-react-app based)
-4. Head to `src/Javascript/Tickable.jsx` for Javascript or `src/Typescript/Tickable.tsx` for Typescript
-5. Build your component logic (we've already supplied you the ticking value as a prop)
-6. Check your work using `yarn start` or `npm run start`
-6. Once you are happy with your creation, create a Pull/Merge request (Your name as the title) and push your code. 
-7. Sit back and drink a beverage of your choice (optional).
+1. Fork this repo
+2. Clone it to your local machine
+3. `npm i` or `yarn` to install the dependencies
+4. Checkout a branch that is your name so we know who's code we are looking at.
+5. Have a dig about, its always good to get familiar (its create-react-app based)
+6. Head to `src/Javascript/Tickable.jsx` for Javascript or `src/Typescript/Tickable.tsx` for Typescript
+7. Build your component logic (we've already supplied you the ticking value as a prop)
+8. Check your work using `yarn start` or `npm run start`
+9. Once you are happy with your creation, commit your changes and push your branch to your remote fork
+10. create a Pull/Merge request back to our repo (Your name as the title)
+11. Sit back and drink a beverage of your choice (optional).
 
 ## Arrrrrgh Typescript!? I only know Javascript!
 
