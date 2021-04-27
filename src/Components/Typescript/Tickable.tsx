@@ -17,8 +17,10 @@ const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
   const prevNumber: string = usePrevious<string>(value);
 
   const animatedText = useSpring({
-    val: parseInt(value),
-    from: { val: +prevNumber },
+    val: +value,
+    opacity: 1,
+    config: { duration: tickRate / 2.5 },
+    from: { val: +prevNumber, opacity: 0 },
   });
 
   const direction: string =

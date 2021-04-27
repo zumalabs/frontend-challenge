@@ -6,18 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   font-family: "Zen Dots", cursive;
 
-  h1 {
-    font-size: 3rem;
-
-    @media (max-width: 700px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 550px) {
-      font-size: 1.5rem;
-    }
-  }
-
   .up {
     color: #73e84f;
   }
