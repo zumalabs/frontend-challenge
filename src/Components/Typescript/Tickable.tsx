@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Wrapper } from "./tickableStyles";
 import usePrevious from "../../Hooks/usePrevious";
 import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
+import { useSpring, animated } from "react-spring";
 
 // 🐸
 
@@ -15,6 +16,11 @@ interface Tickable {
 const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
   const prevNumber: string = usePrevious<string>(value);
 
+  const animatedText = useSpring({
+    val: parseInt(value),
+    from: { val: +prevNumber },
+  });
+
   const direction: string =
     value > prevNumber ? "up" : value < prevNumber ? "down" : "";
 
@@ -26,7 +32,10 @@ const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
       </div>
 
       <div className="mainTextContainer">
-        <h1 className={direction}>{value}</h1>
+        <animated.div className={`${direction} mainText`}>
+          {animatedText.val.to((val: number) => Math.floor(Number(val)))}
+        </animated.div>
+        {/* <h1 className={direction}>{value}</h1> */}
         {direction === "up" ? (
           <IoMdArrowDropup className="icon" color="#73e84f" />
         ) : direction === "down" ? (

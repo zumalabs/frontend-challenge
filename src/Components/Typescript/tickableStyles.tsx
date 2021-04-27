@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Zen Dots", cursive;
 
   h1 {
     font-size: 3rem;
@@ -23,6 +24,18 @@ export const Wrapper = styled.div`
 
   .down {
     color: #ff4747;
+  }
+
+  .mainText {
+    font-size: 3rem;
+
+    @media (max-width: 700px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 550px) {
+      font-size: 1.5rem;
+    }
   }
 
   .icon {
