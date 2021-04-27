@@ -1,35 +1,44 @@
-import { FC, useState, useEffect } from "react";
-import "./Tickable.css";
+import { FC } from "react";
+import { Wrapper } from "./tickableStyles";
 import usePrevious from "../../Hooks/usePrevious";
+import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
 
 // 🐸
 
 interface Tickable {
   value: string;
+  tickRate: number;
+  lowest: number;
+  highest: number;
 }
 
-const TickableTS: FC<Tickable> = ({ value }) => {
+const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
   const prevNumber: string = usePrevious<string>(value);
 
-  console.log("VALUE and PREV: ", value, prevNumber);
-
-  // const [direction, setDirection] = useState<string>("");
-
-  // useEffect(() => {
-  //   if (prevNumber > value) {
-  //     setDirection("down");
-  //   } else {
-  //     setDirection("up");
-  //   }
-  // }, [prevNumber]);
-
-  const direction =
+  const direction: string =
     value > prevNumber ? "up" : value < prevNumber ? "down" : "";
 
   return (
-    <div>
-      <h2 className={direction}>{value}</h2>
-    </div>
+    <Wrapper>
+      <div className={"highLowContainer"}>
+        <p className={"highLowValue"}>{lowest}</p>
+        <p className={"highLowTextHeader"}>LOW</p>
+      </div>
+
+      <div className="mainTextContainer">
+        <h1 className={direction}>{value}</h1>
+        {direction === "up" ? (
+          <IoMdArrowDropup className="icon" color="#73e84f" />
+        ) : direction === "down" ? (
+          <IoMdArrowDropdown className="icon" color="#ff4747" />
+        ) : null}
+      </div>
+
+      <div className={"highLowContainer"}>
+        <p className={"highLowValue"}>{highest}</p>
+        <p className={"highLowTextHeader"}>HIGH</p>
+      </div>
+    </Wrapper>
   );
 };
 
