@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="ticker-container"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+    }
+  }
+>
+  <p
+    className="ticker-value"
+    data-testid="ticker"
+  >
+    300
+  </p>
+</div>
+`;

@@ -4,11 +4,13 @@ import JavascriptTickable from './Javascript/Tickable';
 import useInterval from "../Hooks/useInterval";
 import './ChallengeContainer.css';
 
-const ChallengeContainer = () => { 
+const ChallengeContainer = () => {
   const [value, setValue] = useState<string>('0');
-  const [tickSpeed, setTickSpeed] = useState<number>(5000);
+  const [tickSpeed, setTickSpeed] = useState<number>(3000);
 
-  useInterval(() => { 
+  //! I changed the tick and input parameters, the was a minor bug when the input was in its initial value. 
+
+  useInterval(() => {
     setValue((Math.random() * 1000).toFixed(0));
   }, tickSpeed)
 
@@ -22,11 +24,11 @@ const ChallengeContainer = () => {
         </div>
         <div className={'tickSpeedControlContainer'}>
           <div className={'tickSpeedControlLabelContainer'}>
-            <label>1s</label>
+            <label>3s</label>
             <label>Tick Speed</label>
             <label>10s</label>
           </div>
-          <input className={'tickSpeedControl'} type={'range'} min={1000} max={10000} onChange={(e) => setTickSpeed(parseInt(e.target.value))}/>
+          <input className={'tickSpeedControl'} type={'range'} defaultValue={3000} min={3000} max={10000} onChange={(e) => setTickSpeed(parseInt(e.target.value))} />
         </div>
       </div>
     </div>

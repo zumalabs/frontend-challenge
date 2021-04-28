@@ -1,4 +1,4 @@
-.challengeContainerWrapper { 
+.challengeContainerWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,20 +8,21 @@
   background-color: #333;
   color: white;
 }
-.challengeContainer { 
+
+.challengeContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 50%;
   height: 50%;
-  box-shadow: 0px 0px 60px 6px rgba(0, 0, 0, 0.571) ;
+  box-shadow: 0px 0px 60px 6px rgba(0, 0, 0, 0.571);
   border-radius: 8px;
   background-color: #666;
   color: white;
 }
 
-.tickSpeedControlContainer { 
+.tickSpeedControlContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,17 +31,22 @@
   padding: 12px
 }
 
-.tickSpeedControlLabelContainer{ 
+.tickSpeedControlLabelContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.tickSpeedControlContainer>input { 
+.tickSpeedControlContainer>input {
   width: 100%;
 }
 
-.logo { 
+.tickSpeedControl::-webkit-slider-thumb {
+  background: #30be35 !important;
+  width: 10px;
+}
+
+.logo {
   max-width: 200px;
   max-height: 150px;
 }
