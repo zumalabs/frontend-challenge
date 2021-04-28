@@ -6,9 +6,10 @@ import "./ChallengeContainer.css";
 
 const ChallengeContainer = () => {
   const [value, setValue] = useState<string>("0");
-  const [tickSpeed, setTickSpeed] = useState<number>(5000);
+  const [tickSpeed, setTickSpeed] = useState<number>(1000);
   const [highest, setHighest] = useState<number>(0);
   const [lowest, setLowest] = useState<number>(0);
+  const [showDifference, setShowDifference] = useState<boolean>(true);
 
   function checkMinMax(val: string) {
     if (+val > +highest) {
@@ -35,9 +36,18 @@ const ChallengeContainer = () => {
   return (
     <div className={"challengeContainerWrapper"}>
       <div className={"challengeContainer"}>
-        <button onClick={resetData} className={"clearDataButton"}>
-          RESET DATA
-        </button>
+        <div className={"btnGroupContainer"}>
+          <button
+            onClick={() => setShowDifference(!showDifference)}
+            className={"showDiffBtn btn"}
+          >
+            {!showDifference ? "SHOW DIFF" : "HIDE DIFF"}
+          </button>
+          <button onClick={resetData} className={"clearDataButton btn"}>
+            RESET DATA
+          </button>
+        </div>
+
         <img
           alt={"logo"}
           className={"logo"}
@@ -46,12 +56,12 @@ const ChallengeContainer = () => {
           }
         />
         <div className={"tickables"}>
-          <JavascriptTickable value={value} />
           <TypescriptTickable
             value={value}
             tickRate={tickSpeed}
             lowest={lowest}
             highest={highest}
+            showDiff={showDifference}
           />
         </div>
         <div className={"tickSpeedControlContainer"}>

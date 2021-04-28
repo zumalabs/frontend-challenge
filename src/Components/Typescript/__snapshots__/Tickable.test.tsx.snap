@@ -19,11 +19,11 @@ exports[`Tickable renders correctly enzyme 1`] = `
   <div
     className="mainTextContainer"
   >
-    <h1
-      className=""
+    <Animated(div)
+      className=" mainText"
     >
-      500
-    </h1>
+      <Component />
+    </Animated(div)>
   </div>
   <div
     className="highLowContainer"

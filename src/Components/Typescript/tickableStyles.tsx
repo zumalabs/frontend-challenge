@@ -15,24 +15,39 @@ export const Wrapper = styled.div`
   }
 
   .mainText {
-    font-size: 3rem;
+    font-size: 2rem;
 
     @media (max-width: 700px) {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     @media (max-width: 550px) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
+  }
+
+  .differenceText {
+    font-weight: 400px;
+    font-size: 12px;
+    color: #c7c7c7;
   }
 
   .icon {
     align-self: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    width: 40;
+
+    @media (max-width: 700px) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 550px) {
+      font-size: 1.2rem;
+    }
   }
 
   .mainTextContainer {
-    flex: 2;
+    flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,9 +55,10 @@ export const Wrapper = styled.div`
 
   .highLowContainer {
     flex: 0.5;
-    margin: 10px;
+    justify-content: center;
+    align-items: center;
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
       display: none;
     }
   }

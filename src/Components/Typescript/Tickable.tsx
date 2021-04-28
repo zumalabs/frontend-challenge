@@ -11,20 +11,29 @@ interface Tickable {
   tickRate: number;
   lowest: number;
   highest: number;
+  showDiff: boolean;
 }
 
-const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
+const TickableTS: FC<Tickable> = ({
+  value,
+  tickRate,
+  lowest,
+  highest,
+  showDiff,
+}) => {
   const prevNumber: string = usePrevious<string>(value);
 
   const animatedText = useSpring({
-    val: +value,
     opacity: 1,
     config: { duration: tickRate / 2.5 },
-    from: { val: +prevNumber, opacity: 0 },
+    from: { val: +prevNumber },
+    to: { val: +value },
   });
 
   const direction: string =
     value > prevNumber ? "up" : value < prevNumber ? "down" : "";
+
+  const difference: number = Number(value) - Number(prevNumber);
 
   return (
     <Wrapper>
@@ -33,11 +42,17 @@ const TickableTS: FC<Tickable> = ({ value, tickRate, lowest, highest }) => {
         <p className={"highLowTextHeader"}>LOW</p>
       </div>
 
-      <div className="mainTextContainer">
+      <div title={difference.toString()} className="mainTextContainer">
         <animated.div className={`${direction} mainText`}>
-          {animatedText.val.to((val: number) => Math.floor(Number(val)))}
+          {animatedText?.val.to((val: number) => Math.floor(val).toString())}
         </animated.div>
-        {/* <h1 className={direction}>{value}</h1> */}
+        {showDiff && !!difference && (
+          <p className="differenceText">
+            ({difference > 0 && "+"}
+            {difference || ""})
+          </p>
+        )}
+
         {direction === "up" ? (
           <IoMdArrowDropup className="icon" color="#73e84f" />
         ) : direction === "down" ? (

@@ -45,7 +45,13 @@
   max-height: 150px;
 }
 
-.clearDataButton {
+.btnGroupContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
   cursor: pointer;
   align-self: flex-end;
   margin: 15px;
@@ -56,6 +62,10 @@
   outline: auto;
   border-width: 2px solid white;
   color: #fff;
+}
+
+.showDiffBtn {
+  align-self: flex-start;
 }
 
 .tickables {
