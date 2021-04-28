@@ -41,11 +41,6 @@
   width: 100%;
 }
 
-.tickSpeedControl::-webkit-slider-thumb {
-  background: #30be35 !important;
-  width: 10px;
-}
-
 .logo {
   max-width: 200px;
   max-height: 150px;
