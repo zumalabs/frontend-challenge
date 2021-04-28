@@ -8,7 +8,8 @@ Globals.assign({
 });
 
 // NOTE:
-// react-spring broke tests when swapped from h1 to animated.div, difficult to find solution
+// react-spring broke tests when swapped from h1 to animated.div for value,
+// difficult to find working solution
 
 const testComp = (
   <Tickable

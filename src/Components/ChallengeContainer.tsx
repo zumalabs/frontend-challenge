@@ -1,6 +1,5 @@
 import { useState } from "react";
 import TypescriptTickable from "./Typescript/Tickable";
-import JavascriptTickable from "./Javascript/Tickable";
 import useInterval from "../Hooks/useInterval";
 import "./ChallengeContainer.css";
 
@@ -21,17 +20,17 @@ const ChallengeContainer = () => {
     }
   }
 
-  useInterval(() => {
-    const randomVal: string = (Math.random() * 1000).toFixed(0);
-    checkMinMax(randomVal);
-    setValue(randomVal);
-  }, tickSpeed);
-
   const resetData = () => {
     setLowest(0);
     setHighest(0);
     setValue("0");
   };
+
+  useInterval(() => {
+    const randomVal: string = (Math.random() * 1000).toFixed(0);
+    checkMinMax(randomVal);
+    setValue(randomVal);
+  }, tickSpeed);
 
   return (
     <div className={"challengeContainerWrapper"}>
