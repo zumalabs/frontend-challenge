@@ -3,6 +3,7 @@ import TypescriptTickable from './Typescript/Tickable';
 import JavascriptTickable from './Javascript/Tickable';
 import useInterval from "../Hooks/useInterval";
 import './ChallengeContainer.css';
+import React from "react";
 
 const ChallengeContainer = () => { 
   const [value, setValue] = useState<string>('0');
