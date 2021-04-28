@@ -11,7 +11,13 @@ Globals.assign({
 // react-spring broke tests when swapped from h1 to animated.div, difficult to find solution
 
 const testComp = (
-  <Tickable tickRate={5000} highest={0} lowest={0} value={"500"} />
+  <Tickable
+    showDiff={false}
+    tickRate={5000}
+    highest={0}
+    lowest={0}
+    value={"500"}
+  />
 );
 
 describe("Tickable", () => {
