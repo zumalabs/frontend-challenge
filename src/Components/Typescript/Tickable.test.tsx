@@ -33,5 +33,15 @@ describe('Tickable component', () => {
     
   });
 
-  // test('should highlight decrements in the value', () => {});
+  test('should highlight decrements in the value', async () => {
+    const initialTickValue = '52';
+    const { rerender } = render(<Tickable value={initialTickValue} />);
+    const displayValue = screen.getByText('52');
+    expect(displayValue).not.toHaveClass('increment')
+    expect(displayValue).not.toHaveClass('decrement');
+    const updatedTickValue = '42';
+    rerender(<Tickable value={updatedTickValue} />);
+    const updateDisplayValue = await screen.findByText('42')
+    expect(updateDisplayValue).toHaveClass('decrement')
+  });
 });

@@ -1,6 +1,6 @@
 import { FC, useRef, useEffect, useState } from 'react';
 import { getHighlight, HighlightState } from './getHighlight';
-import './Tickable.css'
+import './Tickable.css';
 // 🐸 Operation Bullfrog🐸
 
 interface Tickable {
@@ -12,25 +12,35 @@ const TickableTS: FC<Tickable> = ({ value }) => {
   const savedValue = useRef(parseInt(value));
   // Handling className changes in our mighty Ticker
   const [highlight, setHighlight] = useState<HighlightState>('');
+  const emojiUp = '🐸🐸🐸';
+  const emojiDown = '😈';
 
-  const handleHighlight = (highlight:HighlightState) => {
+  const handleHighlight = (highlight: HighlightState) => {
     setHighlight(highlight);
-    setInterval(() => {
-      setHighlight('')
-    }, 700)
-  }
+    setTimeout(() => {
+      setHighlight('');
+    }, 800);
+  };
 
   useEffect(() => {
     const prevValue = savedValue.current;
     const nextValue = parseInt(value);
     const highlight = getHighlight(prevValue, nextValue);
-    handleHighlight(highlight)
+    handleHighlight(highlight);
     // Setting ref for the next render to access
     savedValue.current = parseInt(value);
-
   }, [value]);
 
-  return <span className={`displayValue ${highlight}`}>{value}</span>;
+  return (
+    <div className={`ticker ${highlight}`}>
+      {value}
+      {highlight && (
+        <p className='emoji'>
+          {highlight === 'increment' ? emojiUp : emojiDown}
+        </p>
+      )}
+    </div>
+  );
 };
 
 export default TickableTS;
