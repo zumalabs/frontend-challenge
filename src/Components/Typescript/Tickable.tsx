@@ -1,12 +1,12 @@
-import { FC } from "react";
-// 🐸 Operation Froggy🐸
+import { FC } from 'react';
+// 🐸 Operation Bullfrog🐸
 
-interface Tickable { 
+interface Tickable {
   value: string;
 }
 
-const TickableTS: FC<Tickable> = ({ value }) => { 
-  return null;
-}
+const TickableTS: FC<Tickable> = ({ value }) => {
+  return <span>{value}</span>;
+};
 
 export default TickableTS;
