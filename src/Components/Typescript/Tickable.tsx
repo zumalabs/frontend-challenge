@@ -6,7 +6,7 @@ interface Tickable {
 }
 
 const TickableTS: FC<Tickable> = ({ value }) => {
-  return <span>{value}</span>;
+  return <span className="displayValue">{value}</span>;
 };
 
 export default TickableTS;

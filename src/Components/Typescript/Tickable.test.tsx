@@ -11,7 +11,13 @@ describe('Tickable component', () => {
     expect(displayValue).toBeInTheDocument();
   });
 
-  // test('should have a resting state with no highlighting', () => {});
+  test('should have a resting state with no highlighting', () => {
+    const tickValue = '42';
+    render(<Tickable value={tickValue} />);
+    const displayValue = screen.getByText('42');
+    expect(displayValue).not.toHaveClass('increment');
+    expect(displayValue).not.toHaveClass('decrement');
+  });
 
   // test('should highlight increments in the value', () => {});
 
