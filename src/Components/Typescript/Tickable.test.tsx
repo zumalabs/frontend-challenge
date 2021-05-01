@@ -4,6 +4,7 @@ import Tickable from './Tickable';
 
 // Set up acceptance criteria
 describe('Tickable component', () => {
+  // "Your component must display the value"
   test('should display the value, if value prop is passed', () => {
     const tickValue = '42';
     render(<Tickable value={tickValue} />);
@@ -11,6 +12,7 @@ describe('Tickable component', () => {
     expect(displayValue).toBeInTheDocument();
   });
 
+  // Your component must have resting state with no highlighting
   test('should have a resting state with no highlighting', () => {
     const tickValue = '42';
     render(<Tickable value={tickValue} />);
@@ -19,7 +21,8 @@ describe('Tickable component', () => {
     expect(displayValue).not.toHaveClass('decrement');
   });
 
-  test('highlight should have an increment className as the value increments', async () => {
+  // Your component must highlight increments in the value
+  test('should highlight incremented values. Finally, the classname is cleared.', async () => {
     const initialTickValue = '7';
     const { rerender } = render(<Tickable value={initialTickValue} />);
     const displayValue = screen.getByText('7');
@@ -32,8 +35,9 @@ describe('Tickable component', () => {
     await waitFor(() => expect(updateDisplayValue).not.toHaveClass('increment'))
     
   });
-  
-  test('should highlight decrements in the value', async () => {
+
+  // Your component must highlight decrements in the value
+  test('should highlight decrements in the value, then clear the highlight.', async () => {
     const initialTickValue = '52';
     const { rerender } = render(<Tickable value={initialTickValue} />);
     const displayValue = screen.getByText('52');
