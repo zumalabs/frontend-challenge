@@ -2,7 +2,7 @@ import { FC, useRef, useEffect, useState } from 'react';
 import { getHighlight, HighlightState } from './getHighlight';
 import './Tickable.css';
 // 🐸 Operation Bullfrog🐸
-// BONUS: Choice of beverage was a San Pellegrino Clementine sparkling soft drink. 🍊
+// BONUS: Choice of beverage was a San Pellegrino Clementine sparkling soft drink.🍊
 
 interface Tickable {
   value: string;
@@ -26,6 +26,7 @@ const TickableTS: FC<Tickable> = ({ value }) => {
     return timer;
   };
 
+  // Handles the value changeover, parses and compares them to decide the highlight class.
   useEffect(() => {
     const prevValue = parseInt(savedValue.current);
     const nextValue = parseInt(value);
