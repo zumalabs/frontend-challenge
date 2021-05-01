@@ -15,20 +15,24 @@ const TickableTS: FC<Tickable> = ({ value }) => {
   const emojiUp = '🐸🐸🐸';
   const emojiDown = '😈';
 
-  const handleHighlight = (highlight: HighlightState) => {
+  const handleHighlight = (highlight: HighlightState):NodeJS.Timeout => {
     setHighlight(highlight);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setHighlight('');
     }, 800);
+    return timer
   };
 
   useEffect(() => {
     const prevValue = savedValue.current;
     const nextValue = parseInt(value);
     const highlight = getHighlight(prevValue, nextValue);
-    handleHighlight(highlight);
+    const timer = handleHighlight(highlight);
     // Setting ref for the next render to access
     savedValue.current = parseInt(value);
+    // Cleaning up the timeout function - Jest was flagging a memory leak.
+    return () => clearTimeout(timer)
+
   }, [value]);
 
   return (

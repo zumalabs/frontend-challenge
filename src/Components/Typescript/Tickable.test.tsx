@@ -1,5 +1,5 @@
 // import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import Tickable from './Tickable';
 
 // Set up acceptance criteria
@@ -29,10 +29,10 @@ describe('Tickable component', () => {
     rerender(<Tickable value={updatedTickValue} />);
     const updateDisplayValue = await screen.findByText('42')
     expect(updateDisplayValue).toHaveClass('increment')
-
+    await waitFor(() => expect(updateDisplayValue).not.toHaveClass('increment'))
     
   });
-
+  
   test('should highlight decrements in the value', async () => {
     const initialTickValue = '52';
     const { rerender } = render(<Tickable value={initialTickValue} />);
@@ -43,5 +43,6 @@ describe('Tickable component', () => {
     rerender(<Tickable value={updatedTickValue} />);
     const updateDisplayValue = await screen.findByText('42')
     expect(updateDisplayValue).toHaveClass('decrement')
+    await waitFor(() => expect(updateDisplayValue).not.toHaveClass('decrement'))
   });
 });
