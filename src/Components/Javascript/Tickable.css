@@ -1,0 +1,17 @@
+.ticker{ 
+    display: flex;
+    font-size: 2rem;
+    width: 300px;
+    justify-content: space-around;
+    vertical-align: middle;
+
+  }
+  
+  .up {
+    color: #2ecc71; 
+  }
+  
+  .down {
+    color: #e74c3c; 
+  }
+  
