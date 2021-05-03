@@ -41,11 +41,11 @@ const TickableJS = ({ value }) => {
   }, [value]);
 
   return (
-    <div className={`ticker ${higherlower}`}>
+    <div data-testid="ticker" className={`ticker ${higherlower}`}>
       {higherlower ? (
         <span className="emoji">{higherlower === "up" ? up : down}</span>
       ) : null}
-      <span>{value}</span>
+      <span data-testid="value">{value}</span>
       {higherlower ? (
         <span className="emoji">{higherlower === "up" ? up : down}</span>
       ) : null}
