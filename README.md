@@ -26,15 +26,13 @@ Run the following commands to setup, given `node` and `npm` is available:
 
 ## Additionally installed tools/dependencies
 
-- Jest
-- Enzyme
-  Thats about it!
+None other than the current ones!
 
 ## If this was a bigger project
 
 As this is a coding the challenge, the scope is relatively small. However, if this was a bigger challenge - I would:
 
-1. Add further unit tests to ensure I'm covering more areas of the application
+1. Add further unit tests to ensure I'm covering more areas of the application as well as dynamic tests, as the current tests are not dynamic - so if content changes, then the tests will break. I intended to use jest and enzyme, but encountered problems with the setup and installing, which consumed time and I ended up abandoning.
 2. As aesthetically pleasing as the current app looks, it would be nice to have more time to add further flair e.g. animations using a library like framer motion, a component library like chakra ui etc.
 3. As structured as the current application is, further time to refactor code would be nice.
 
