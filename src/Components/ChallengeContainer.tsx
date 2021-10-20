@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TypescriptTickable from './Typescript/Tickable';
 import JavascriptTickable from './Javascript/Tickable';
 import useInterval from "../Hooks/useInterval";
 import './ChallengeContainer.css';
@@ -18,7 +17,7 @@ const ChallengeContainer = () => {
         <img alt={'logo'} className={'logo'} src={'https://testing.venetian.zuma.dev/static/media/logo.60893f15.svg'} />
         <div className={'tickables'}>
           <JavascriptTickable value={value} />
-          <TypescriptTickable value={value} />
+          <label>Current Tickspeed: {tickSpeed / 1000}s</label>
         </div>
         <div className={'tickSpeedControlContainer'}>
           <div className={'tickSpeedControlLabelContainer'}>
