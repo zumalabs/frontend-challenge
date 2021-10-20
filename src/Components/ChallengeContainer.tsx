@@ -17,7 +17,9 @@ const ChallengeContainer = () => {
         <img alt={'logo'} className={'logo'} src={'https://testing.venetian.zuma.dev/static/media/logo.60893f15.svg'} />
         <div className={'tickables'}>
           <JavascriptTickable value={value} />
-          <label>Current Tickspeed: {tickSpeed / 1000}s</label>
+          <hr />
+          <label>Current Tick Speed: {tickSpeed / 1000}s</label>
+          <br/>
         </div>
         <div className={'tickSpeedControlContainer'}>
           <div className={'tickSpeedControlLabelContainer'}>

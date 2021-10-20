@@ -6,10 +6,10 @@ const TickableJS = ({ value }) => {
 
   const compareValues = () => {
     if (value > previousValue) {
-      return <p style={{color: "lightgreen"}}>{value}</p>
+      return <p style={{color: "lightgreen", fontWeight: "bold"}}>{value}</p>
 
     } else if (previousValue > value) {
-      return <p style={{color: "red"}}>{value}</p>
+      return <p style={{color: "red", fontWeight: "bold"}}>{value}</p>
     } else {
       return <p>{value}</p>
     }
@@ -17,7 +17,8 @@ const TickableJS = ({ value }) => {
 
   return (
     <>
-      <p>Current Value:</p> {compareValues()}
+      <p>Current Value:</p> 
+      {compareValues()}
       <p>Previous Value: </p> 
       <p>{previousValue}</p>
     </>
