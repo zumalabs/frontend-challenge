@@ -1,5 +1,15 @@
+import usePrevious from "../../Hooks/usePrevious";
+
 const TickableJS = ({ value }) => { 
-  return null;
+
+  const previousValue = usePrevious(value)
+
+  return (
+    <>
+      <p>Current Value: {value}</p>
+      <p>Previous Value: {previousValue}</p>
+    </>
+  );
 }
 
 export default TickableJS;
